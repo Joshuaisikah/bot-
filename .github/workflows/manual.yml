@@ -2,7 +2,7 @@ name: Cascade Vote Bot
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes
+    - cron: '* * * * *'  # Every minute
 
 jobs:
   vote:
@@ -22,4 +22,4 @@ jobs:
       - name: Run vote script
         run: python bot.py >> vote.log 2>&1
         env:
-          PYTHONUNBUFFERED: 1  # For real-time output in logs
+          PYTHONUNBUFFERED: 1
