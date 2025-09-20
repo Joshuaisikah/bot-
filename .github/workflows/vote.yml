@@ -3,7 +3,9 @@ name: Cascade Vote Bot
 on:
   schedule:
     - cron: '* * * * *'  # Every minute
-
+  push:
+    branches:
+      - main
 jobs:
   vote:
     runs-on: ubuntu-latest
